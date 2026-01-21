@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Marketplace - Stock Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">Account Marketplace</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Marketplace</a>
+                <a href="add-account.html" class="nav-link">Add Account</a>
+                <button id="logoutBtn" class="btn btn-danger">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="mt-4 mb-4">
+            <h1>Available Accounts</h1>
+            <p class="mt-1">Browse all managed accounts in stock</p>
+        </div>
+        
+        <div id="loading" class="text-center mt-4">
+            <div class="spinner" style="width: 40px; height: 40px;"></div>
+            <p class="mt-2">Loading accounts...</p>
+        </div>
+        
+        <div id="accountsContainer" class="accounts-grid hidden">
+            <!-- Account cards will be dynamically inserted here -->
+        </div>
+        
+        <div id="noAccounts" class="text-center mt-4 hidden">
+            <div class="alert">
+                <h3>No accounts found</h3>
+                <p class="mt-2">Start by adding your first account</p>
+                <a href="add-account.html" class="btn mt-2">Add Account</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

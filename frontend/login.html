@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Account Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="login-title">Account Management</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" id="username" class="form-input" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-input" required>
+            </div>
+            
+            <div id="loginMessage" class="alert hidden"></div>
+            
+            <button type="submit" class="btn" style="width: 100%;">
+                <span id="loginText">Login</span>
+                <span id="loginSpinner" class="spinner hidden"></span>
+            </button>
+        </form>
+        
+        <div class="mt-3 text-center">
+            <small>Default credentials: admin / ChangeThisPassword123!</small>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

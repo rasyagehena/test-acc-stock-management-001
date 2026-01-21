@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Account - Stock Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">Account Manager</a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Marketplace</a>
+                <a href="add-account.html" class="nav-link active">Add Account</a>
+                <button id="logoutBtn" class="btn btn-danger">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <h1 class="mb-4">Add New Account</h1>
+            
+            <form id="addAccountForm">
+                <div class="form-group">
+                    <label for="accountId" class="form-label">Unique Numeric ID *</label>
+                    <input type="number" id="accountId" class="form-input" min="1" required>
+                    <div id="idStatus" class="mt-1"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="googlePassword" class="form-label">Google Password *</label>
+                    <input type="password" id="googlePassword" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="moontonPassword" class="form-label">Moonton Password *</label>
+                    <input type="password" id="moontonPassword" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="secondaryPassword" class="form-label">Secondary Password *</label>
+                    <input type="password" id="secondaryPassword" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Account Images (1-40 images)</label>
+                    <div class="file-upload">
+                        <input type="file" id="imageUpload" class="file-input" multiple accept="image/*">
+                        <label for="imageUpload" class="file-label">
+                            <div class="mb-2">Click to select images or drag & drop</div>
+                            <div class="text-center">
+                                <div class="btn">Choose Files</div>
+                            </div>
+                            <small class="mt-2" style="display: block;">Maximum 40 images, 5MB each</small>
+                        </label>
+                    </div>
+                    
+                    <div id="imagePreview" class="file-preview mt-2"></div>
+                    <div id="imageCount" class="mt-1 text-center"></div>
+                </div>
+                
+                <div id="formMessage" class="alert hidden"></div>
+                
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success" style="min-width: 200px;">
+                        <span id="submitText">Add Account</span>
+                        <span id="submitSpinner" class="spinner hidden"></span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/add-account.js"></script>
+</body>
+</html>
